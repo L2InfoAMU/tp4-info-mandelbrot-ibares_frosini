@@ -141,4 +141,11 @@ public class ComplexTest {
         assertEquals(4, two.squaredModulus());
         assertEquals(2, oneMinusI.squaredModulus());
     }
+
+    @Test
+    void testEquals(){
+        assertEquals(false, Complex.ONE.equals(2));
+        assertEquals(false, minusI.equals(Complex.ZERO));
+        assertEquals(true, two.equals(two));
+    }
 }
