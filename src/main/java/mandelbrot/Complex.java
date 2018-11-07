@@ -48,11 +48,13 @@ public class Complex {
     static Complex I = new Complex(0, -1);
 
     double getReal() {
-        return imaginary;
+
+        return this.real;
     }
 
     double getImaginary() {
-        return imaginary;
+
+        return this.imaginary;
     }
 
     /**
