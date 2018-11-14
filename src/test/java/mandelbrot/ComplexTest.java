@@ -148,4 +148,11 @@ public class ComplexTest {
         assertEquals(false, minusI.equals(Complex.ZERO));
         assertEquals(true, two.equals(two));
     }
+
+    @Test
+    void testReal(){
+        assertEquals(new Complex(28,0), Complex.real(28));
+        assertEquals(new Complex(-6,0), Complex.real(-6));
+        assertEquals(Complex.ONE, Complex.real(1));
+    }
 }
