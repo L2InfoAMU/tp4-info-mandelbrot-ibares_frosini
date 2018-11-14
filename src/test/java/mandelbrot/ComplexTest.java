@@ -179,4 +179,11 @@ public class ComplexTest {
         assertEquals(Math.sqrt(4), two.modulus());
         assertEquals(Math.sqrt(2), oneMinusI.modulus());
     }
+
+    @Test
+    void testScale(){
+        assertEquals(new Complex(5,0), Complex.ONE.scale(5));
+        assertEquals(oneMinusI, new Complex(0.5,-0.5).scale(2));
+        assertEquals(Complex.ZERO,Complex.ZERO.scale(5));
+    }
 }
