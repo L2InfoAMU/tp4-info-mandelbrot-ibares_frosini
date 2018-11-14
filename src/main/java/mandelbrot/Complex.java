@@ -189,11 +189,8 @@ public class Complex {
      */
     Complex pow(int p) {
         if (p == 0)
-            return ZERO;
-        Complex result = (this.multiply(this)).pow(p / 2);
-        if (p % 2 == 1)
-            result = result.multiply(this);
-        return result;
+            return ONE;
+        return this.pow(p-1).multiply(this);
     }
 
     /**
@@ -203,6 +200,7 @@ public class Complex {
      * @return the complex number <code>lambda * this</code>
      */
     public Complex scale(double lambda) {
+
         return new Complex(lambda * real, lambda * imaginary);
     }
 
